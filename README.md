@@ -144,7 +144,7 @@ The script automatically generates comprehensive diagnostic plots:
 
 **Chiara Giavalisco**  
 * Master's Degree Coursework: *Metodi Numerici per il Data Mining*  
-* [LinkedIn Profile]([https://linkedin.com]https://www.linkedin.com/in/chiara-giavalisco-28b1b9268/) • [GitHub Profile]([https://github.com]https://github.com/chiaragiavalisco/chiaragiavalisco.github.io) • [Email](mailto:chiara.giavalisco@gmail.com)
+* [LinkedIn Profile](https://www.linkedin.com/in/chiara-giavalisco-28b1b9268/) • [GitHub Profile](https://github.com/chiaragiavalisco/chiaragiavalisco.github.io) • [Email](mailto:chiara.giavalisco@gmail.com)
 
 ---
 
