@@ -126,7 +126,7 @@ The script automatically generates comprehensive diagnostic plots:
    ```
 2. Open MATLAB, navigate to the cloned folder, and run:
    ```matlab
-   run('source_localization_eeg.m')
+   run('eeg_source_localization.m')
    ```
 
 ---
@@ -144,7 +144,7 @@ The script automatically generates comprehensive diagnostic plots:
 
 **Chiara Giavalisco**  
 * Master's Degree Coursework: *Metodi Numerici per il Data Mining*  
-* [LinkedIn Profile](https://linkedin.com) • [GitHub Profile](https://github.com) • [Email](mailto:your.email@example.com)
+* [LinkedIn Profile]([https://linkedin.com](https://www.linkedin.com/in/chiara-giavalisco-28b1b9268/)) • [GitHub Profile]([https://github.com](https://github.com/chiaragiavalisco/chiaragiavalisco.github.io)) • [Email](mailto:chiara.giavalisco@gmail.com)
 
 ---
 
