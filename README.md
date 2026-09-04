@@ -20,7 +20,7 @@ This repository demonstrates:
 1. **Geometric forward modeling**: Construction of a 3D spherical head volume conductor, random dipole distribution, and synthetic electrode placement.
 2. **Dynamic time-series simulation**: Multichannel autoregressive (AR) signal generation modeling realistic cross-channel electrophysiological dependencies and additive Gaussian noise.
 3. **Analytic minimum-norm estimation (MNE)**: Application of the right pseudo-inverse $x = G^T (GG^T)^{-1} V$.
-4. **Truncated SVD (TSVD)**: Regularization via Moore-Penrose pseudo-inversion with singular-value thresholding ($	au \in [10^{-1}, 10^{-4}]$) to analyze stability, noise suppression, and rank truncation tradeoffs.
+4. **Truncated SVD (TSVD)**: Regularization via Moore-Penrose pseudo-inversion with singular-value thresholding ($	\tau \in [10^{-1}, 10^{-4}]$) to analyze stability, noise suppression, and rank truncation tradeoffs.
 
 ---
 
@@ -65,37 +65,6 @@ The code benchmarks the sensitivity of the reconstruction across four cutoff thr
 Reconstruction discrepancy is quantitatively tracked via Frobenius / spectral norm metrics:
 
 $$\epsilon_\tau = \|x_{\text{MNE}} - x_{\text{TSVD}}(\tau)\|$$
-
----
-
-## 💻 Simulation Pipeline
-
-```
-  [ 3D Sphere Geometry ]        [ Autoregressive Dynamics ]
-   R = 20, 32 Dipoles            5-Channel Coupled AR Model
-           │                                 │
-           ▼                                 ▼
-   Lead Field Matrix G           Synthetic Potentials V(t)
-     (5 sensors x 32 sources)       (5 channels x 100 time points)
-           │                                 │
-           └─────────────────┬───────────────┘
-                             ▼
-              [ Inverse Problem Solvers ]
-            ┌─────────────────────────────┐
-            │ 1. Minimum-Norm (Analytic)  │
-            │ 2. Truncated SVD (4 Scales) │
-            └──────────────┬──────────────┘
-                           ▼
-          [ Temporal & Error Analysis ]
-          - Signal Tracking per Electrode
-          - 2D Contour Error Residuals |V - G*x|
-```
-
-1. **Volume Conductor**: Sphere of radius $R = 20$ centered at the origin.
-2. **Source Space**: 32 neural current sources randomly positioned in the interior ($r < 19$).
-3. **Electrode Array**: 5 scalp electrodes distributed across the spherical surface.
-4. **Time Series**: 100 discrete time instances simulated using coupled cross-channel delay terms and additive white Gaussian noise.
-5. **Validation**: Direct comparison of ground truth scalp potentials $V(t)$ against re-projected estimates $\hat{V}(t) = G \hat{x}(t)$ across all 5 recording channels.
 
 ---
 
